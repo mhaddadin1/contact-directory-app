@@ -1,27 +1,24 @@
-const path = require('path');
+const path = require("path");
 
 module.exports = () => {
   return {
-    mode: 'development',
+    mode: "development",
     entry: {
-      main: './src/js/index.js',
-      install: './src/js/install.js',
-      cards: './src/js/cards.js'
+      main: "./src/js/index.js",
+      install: "./src/js/install.js",
+      cards: "./src/js/cards.js",
     },
 
     // TODO: Add the correct output
     output: {
-      
+      filename: "[name].bundle.js",
+      path: path.resolve(__dirname, "dist"),
     },
 
     // TODO: Add the correct plugins
-    plugins: [
-     
-    ],
+    plugins: [],
 
     // TODO: Add the correct modules
-    module: {
-
-    }
+    module: {},
   };
 };
